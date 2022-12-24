@@ -27,7 +27,7 @@ export default function App() {
 }
 
 const Sketch = () => {
-  const cursorPos = useRef(new THREE.Vector3(0, 0, 10))
+  const cursorPos = useRef(new THREE.Vector3(5, 0, 5))
   const playerRef = useRef<RigidBodyApi>(null!)
 
   useFrame(() => {
