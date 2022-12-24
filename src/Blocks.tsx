@@ -9,7 +9,7 @@ const cols = 10
 const depth = 4
 
 const baseColor = 0x1b998b
-const highlight = 0xd66ba0
+const highlight = 0xefcb68
 
 const tempColor = new THREE.Color()
 

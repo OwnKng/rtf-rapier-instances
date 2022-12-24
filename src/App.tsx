@@ -15,7 +15,9 @@ export default function App() {
         camera.position.setFromSphericalCoords(20, Math.PI / 3, Math.PI / 4)
         camera.position.y += 5
         camera.lookAt(0, 0, 0)
-        camera.zoom = 40
+      }}
+      camera={{
+        zoom: 40,
       }}
       shadows
     >
@@ -57,8 +59,9 @@ const Sketch = () => {
             receiveShadow
             position={[0, -0.5, 0]}
             onPointerMove={(e) => (cursorPos.current = e.point)}
+            onPointerDown={(e) => (cursorPos.current = e.point)}
           >
-            <boxGeometry args={[10000, 0.5, 10000]} />
+            <boxGeometry args={[100, 0.5, 100]} />
             <shadowMaterial transparent opacity={0.2} />
           </mesh>
         </RigidBody>
@@ -71,7 +74,7 @@ const Sketch = () => {
         >
           <mesh receiveShadow castShadow>
             <icosahedronGeometry args={[1.2, 0]} />
-            <meshStandardMaterial color='tomato' flatShading />
+            <meshStandardMaterial color='white' flatShading />
           </mesh>
         </RigidBody>
       </Physics>
